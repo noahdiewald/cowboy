@@ -760,7 +760,7 @@ create_path(Req, State) ->
 			Req4 = cowboy_req:set_resp_header(
 				<<"location">>, << HostURL/binary, Path/binary >>, Req3),
 			put_resource(cowboy_req:set_meta(put_path, Path, Req4),
-				State2, 303)
+				State2, 201)
 	end.
 
 %% Called after content_types_accepted is called for POST methods
